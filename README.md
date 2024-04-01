@@ -1,0 +1,2 @@
+# SysmonConfig
+Sysmon Configuration Templates
