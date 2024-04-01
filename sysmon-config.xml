@@ -115,9 +115,7 @@ NG FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS 
       </ProcessCreate>
     </RuleGroup>
     <RuleGroup name="" groupRelation="or">
-      <Rule name="COLLECT ALL" groupRelation="or">
-        <ProcessCreate onmatch="include"/>
-      </Rule>
+      <ProcessCreate onmatch="include"/>
     </RuleGroup>
     <!-- Event ID 3 == NetworkConnect Detected -->
     <RuleGroup name="" groupRelation="or">
