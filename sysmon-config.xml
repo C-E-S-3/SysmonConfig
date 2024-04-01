@@ -23,9 +23,9 @@ NG FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS 
     <RuleGroup name="" groupRelation="or">
       <ProcessCreate onmatch="exclude">
         <Rule name="" groupRelation="or">
-	  <CommandLine condition="begin with">sh -c /opt/omi/bin/omicli wql root/scx</CommandLine>
-	  <CommandLine condition="begin with">sh -c systemctl status himdsd 1</CommandLine>
-	  <CommandLine condition="contains">/opt/microsoft/omsconfig/Scripts/StatusReport.sh</CommandLine>
+          <CommandLine condition="begin with">sh -c /opt/omi/bin/omicli wql root/scx</CommandLine>
+          <CommandLine condition="begin with">sh -c systemctl status himdsd 1</CommandLine>
+          <CommandLine condition="contains">/opt/microsoft/omsconfig/Scripts/StatusReport.sh</CommandLine>
         </Rule>
       </ProcessCreate>
       <ProcessCreate onmatch="include">
@@ -112,6 +112,9 @@ NG FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS 
           <Image condition="end with">setreuid</Image>
           <Image condition="end with">setregid</Image>
         </Rule>
+        <Rule name="COLLECT ALL" groupRelation="or">
+          <ProcessCreate onmatch="include"/>
+        </Rule>
       </ProcessCreate>
     </RuleGroup>
     <!-- Event ID 3 == NetworkConnect Detected -->
@@ -128,7 +131,7 @@ NG FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS 
     </RuleGroup>
     <!-- Event ID 5 == ProcessTerminate -->
     <RuleGroup name="" groupRelation="or">
-      <ProcessTerminate onmatch="include" />
+      <ProcessTerminate onmatch="exclude" />
     </RuleGroup>
     <!-- Event ID 9 == RawAccessRead -->
     <RuleGroup name="" groupRelation="or">
