@@ -130,7 +130,7 @@ NG FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS 
       </NetworkConnect>
     </RuleGroup>
     <RuleGroup name="" groupRelation="or">
-      <NetworkConnect onmatch="include" />
+      <NetworkConnect onmatch="exclude" />
     </RuleGroup>
     <!-- Event ID 5 == ProcessTerminate -->
     <RuleGroup name="" groupRelation="or">
