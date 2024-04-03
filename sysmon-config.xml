@@ -115,7 +115,7 @@ NG FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS 
       </ProcessCreate>
     </RuleGroup>
     <RuleGroup name="" groupRelation="or">
-      <ProcessCreate onmatch="exclude"/>
+      <ProcessCreate onmatch="include"/>
     </RuleGroup>
     <!-- Event ID 3 == NetworkConnect Detected -->
     <RuleGroup name="" groupRelation="or">
@@ -130,7 +130,7 @@ NG FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS 
       </NetworkConnect>
     </RuleGroup>
     <RuleGroup name="" groupRelation="or">
-      <NetworkConnect onmatch="exclude" />
+      <NetworkConnect onmatch="include" />
     </RuleGroup>
     <!-- Event ID 5 == ProcessTerminate -->
     <RuleGroup name="" groupRelation="or">
